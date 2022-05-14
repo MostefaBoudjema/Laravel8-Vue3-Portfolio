@@ -12,12 +12,6 @@
 ## About Repository
 
 A very simple Laravel 7 + Vue 2 based Curd Starter portfolio for SPA Application.
-<p align="center">
-<img src="https://i.imgur.com/mZAHbUL.png">
-<img src="https://i.imgur.com/3hhoQnq.png">
-<img src="https://i.imgur.com/aHtQkYl.png">
-<img src="https://i.imgur.com/V7OuwLn.png">
-</p>
 
 ## Tech Specification
 
