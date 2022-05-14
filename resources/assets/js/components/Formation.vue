@@ -4,7 +4,7 @@
 					<div class="row">
 						<div class="col-md-10"><h3 class="panel-title">Formation</h3></div>
 						<div class="col-md-2 text-right">
-							<button class="btn btn-success" v-on:click="openformation =true; editformationToggle=false">Ajouter</button>
+							<button class="btn btn-success" v-on:click="openformation =true; editformationToggle=false">ADD</button>
 						</div>
 					</div>
 					
@@ -21,7 +21,7 @@
 						</div>
 						<div class="row">
 
-							<button class="btn btn-success btn-block" v-if="!editformationToggle" v-on:click="addformation">Ajouter</button>
+							<button class="btn btn-success btn-block" v-if="!editformationToggle" v-on:click="addformation">ADD</button>
 							<button class="btn btn-warning btn-block" v-if="editformationToggle" v-on:click="updateformation">Modifier</button>
 						</div>
 
@@ -29,8 +29,8 @@
 					<ul class="list-group">
 						<li class="list-group-item" v-for="formation in formations" :key="formation.id">
 							<div class="pull-right">
-								<button class="btn btn-warning btn-sm" v-on:click="editformation(formation)" >Editer</button>
-								<button class="btn btn-danger btn-sm" v-on:click="deleteformation(formation)" >Supprimer</button>
+								<button class="btn btn-warning btn-sm" v-on:click="editformation(formation)" >EDIT</button>
+								<button class="btn btn-danger btn-sm" v-on:click="deleteformation(formation)" >DELETE</button>
 							</div>
 							<h3>{{formation.titre}}</h3>
 							<p>{{formation.presentation}}</p>
@@ -131,7 +131,7 @@
 				showCancelButton: true,
 				confirmButtonColor: '#3085d6',
 				cancelButtonColor: '#d33',
-				confirmButtonText: 'Oui, Supprimer!',
+				confirmButtonText: 'Oui, DELETE!',
 				cancelButtonText: 'Annuler'
 			}).then((result) => {
 				if (result.isConfirmed) {
@@ -149,8 +149,8 @@
 							console.log('errordeleteformation => ', error);
 						})
 					Swal.fire(
-						'Supprimer!',
-						'formation a etes supprimer avec succee.',
+						'DELETE!',
+						'formation a etes DELETE avec succee.',
 						'success'
 					)
 				}

@@ -2200,7 +2200,7 @@ __webpack_require__.r(__webpack_exports__);
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Oui, Supprimer!',
+        confirmButtonText: 'Oui, DELETE!',
         cancelButtonText: 'Annuler'
       }).then(function (result) {
         if (result.isConfirmed) {
@@ -2216,7 +2216,7 @@ __webpack_require__.r(__webpack_exports__);
           })["catch"](function (error) {
             console.log('errordeletecompetance => ', error);
           });
-          Swal.fire('Supprimer!', 'competance a etes supprimer avec succee.', 'success');
+          Swal.fire('DELETE!', 'competance a etes DELETE avec succee.', 'success');
         }
       });
     }
@@ -2311,7 +2311,7 @@ __webpack_require__.r(__webpack_exports__);
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Oui, Supprimer!',
+        confirmButtonText: 'Oui, DELETE!',
         cancelButtonText: 'Annuler'
       }).then(function (result) {
         if (result.isConfirmed) {
@@ -2327,7 +2327,7 @@ __webpack_require__.r(__webpack_exports__);
           })["catch"](function (error) {
             console.log('error deleteCV => ', error);
           });
-          Swal.fire('Supprimer!', 'Experience a etes supprimer avec succee.', 'success');
+          Swal.fire('DELETE!', 'Experience a etes DELETE avec succee.', 'success');
         }
       });
     }
@@ -2558,7 +2558,7 @@ __webpack_require__.r(__webpack_exports__);
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Oui, Supprimer!',
+        confirmButtonText: 'Oui, DELETE!',
         cancelButtonText: 'Annuler'
       }).then(function (result) {
         if (result.isConfirmed) {
@@ -2574,7 +2574,7 @@ __webpack_require__.r(__webpack_exports__);
           })["catch"](function (error) {
             console.log('errordeleteExperience => ', error);
           });
-          Swal.fire('Supprimer!', 'Experience a etes supprimer avec succee.', 'success');
+          Swal.fire('DELETE!', 'Experience a etes DELETE avec succee.', 'success');
         }
       });
     }
@@ -2732,7 +2732,7 @@ __webpack_require__.r(__webpack_exports__);
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Oui, Supprimer!',
+        confirmButtonText: 'Oui, DELETE!',
         cancelButtonText: 'Annuler'
       }).then(function (result) {
         if (result.isConfirmed) {
@@ -2748,7 +2748,7 @@ __webpack_require__.r(__webpack_exports__);
           })["catch"](function (error) {
             console.log('errordeleteformation => ', error);
           });
-          Swal.fire('Supprimer!', 'formation a etes supprimer avec succee.', 'success');
+          Swal.fire('DELETE!', 'formation a etes DELETE avec succee.', 'success');
         }
       });
     }
@@ -2907,7 +2907,7 @@ __webpack_require__.r(__webpack_exports__);
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Oui, Supprimer!',
+        confirmButtonText: 'Oui, DELETE!',
         cancelButtonText: 'Annuler'
       }).then(function (result) {
         if (result.isConfirmed) {
@@ -2923,7 +2923,7 @@ __webpack_require__.r(__webpack_exports__);
           })["catch"](function (error) {
             console.log('errordeleteportefolio => ', error);
           });
-          Swal.fire('Supprimer!', 'portefolio a etes supprimer avec succee.', 'success');
+          Swal.fire('DELETE!', 'portefolio a etes DELETE avec succee.', 'success');
         }
       });
     }
@@ -34399,7 +34399,7 @@ var render = function () {
                 },
               },
             },
-            [_vm._v("Ajouter")]
+            [_vm._v("ADD")]
           ),
         ]),
       ]),
@@ -34472,7 +34472,7 @@ var render = function () {
                       staticClass: "btn btn-success btn-block",
                       on: { click: _vm.addcompetance },
                     },
-                    [_vm._v("Ajouter")]
+                    [_vm._v("ADD")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -34509,7 +34509,7 @@ var render = function () {
                       },
                     },
                   },
-                  [_vm._v("Editer")]
+                  [_vm._v("EDIT")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -34522,7 +34522,7 @@ var render = function () {
                       },
                     },
                   },
-                  [_vm._v("Supprimer")]
+                  [_vm._v("DELETE")]
                 ),
               ]),
               _vm._v(" "),
@@ -34584,7 +34584,7 @@ var render = function () {
           _c(
             "a",
             { staticClass: "btn btn-success", attrs: { href: "cvs/create" } },
-            [_vm._v("Nouveau cv")]
+            [_vm._v("NEW CV")]
           ),
         ]),
       ]),
@@ -34618,7 +34618,7 @@ var render = function () {
                   staticClass: "btn btn-primary",
                   attrs: { href: "cvs/" + cv.id, role: "button" },
                 },
-                [_vm._v("Show")]
+                [_vm._v("SHOW")]
               ),
               _vm._v(" "),
               _c(
@@ -34627,7 +34627,7 @@ var render = function () {
                   staticClass: "btn btn-warning",
                   attrs: { href: "cvs/" + cv.id + "/edit", role: "button" },
                 },
-                [_vm._v("Editer")]
+                [_vm._v("EDIT")]
               ),
               _vm._v(" "),
               _c(
@@ -34640,7 +34640,7 @@ var render = function () {
                     },
                   },
                 },
-                [_vm._v("Supprimer")]
+                [_vm._v("DELETE")]
               ),
             ]),
           ]),
@@ -34656,7 +34656,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-10" }, [
-      _c("h1", [_vm._v("La Liste de Mes CV")]),
+      _c("h1", [_vm._v("Liste of my CV")]),
     ])
   },
 ]
@@ -34747,7 +34747,7 @@ var render = function () {
                 },
               },
             },
-            [_vm._v("Ajouter")]
+            [_vm._v("ADD")]
           ),
         ]),
       ]),
@@ -34872,7 +34872,7 @@ var render = function () {
                       staticClass: "btn btn-success btn-block",
                       on: { click: _vm.addExperience },
                     },
-                    [_vm._v("Ajouter")]
+                    [_vm._v("ADD")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -34909,7 +34909,7 @@ var render = function () {
                       },
                     },
                   },
-                  [_vm._v("Editer")]
+                  [_vm._v("EDIT")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -34922,7 +34922,7 @@ var render = function () {
                       },
                     },
                   },
-                  [_vm._v("Supprimer")]
+                  [_vm._v("DELETE")]
                 ),
               ]),
               _vm._v(" "),
@@ -34998,7 +34998,7 @@ var render = function () {
                 },
               },
             },
-            [_vm._v("Ajouter")]
+            [_vm._v("ADD")]
           ),
         ]),
       ]),
@@ -35067,7 +35067,7 @@ var render = function () {
                       staticClass: "btn btn-success btn-block",
                       on: { click: _vm.addformation },
                     },
-                    [_vm._v("Ajouter")]
+                    [_vm._v("ADD")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -35104,7 +35104,7 @@ var render = function () {
                       },
                     },
                   },
-                  [_vm._v("Editer")]
+                  [_vm._v("EDIT")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -35117,7 +35117,7 @@ var render = function () {
                       },
                     },
                   },
-                  [_vm._v("Supprimer")]
+                  [_vm._v("DELETE")]
                 ),
               ]),
               _vm._v(" "),
@@ -35187,7 +35187,7 @@ var render = function () {
                 },
               },
             },
-            [_vm._v("Ajouter")]
+            [_vm._v("ADD")]
           ),
         ]),
       ]),
@@ -35260,7 +35260,7 @@ var render = function () {
                       staticClass: "btn btn-success btn-block",
                       on: { click: _vm.addportefolio },
                     },
-                    [_vm._v("Ajouter")]
+                    [_vm._v("ADD")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -35297,7 +35297,7 @@ var render = function () {
                       },
                     },
                   },
-                  [_vm._v("Editer")]
+                  [_vm._v("EDIT")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -35310,7 +35310,7 @@ var render = function () {
                       },
                     },
                   },
-                  [_vm._v("Supprimer")]
+                  [_vm._v("DELETE")]
                 ),
               ]),
               _vm._v(" "),

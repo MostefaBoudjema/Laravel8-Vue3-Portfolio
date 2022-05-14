@@ -3,10 +3,10 @@
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-10">
-                <h1>La Liste de Mes CV</h1>
+                <h1>Liste of my CV</h1>
             </div>
             <div class="col-md-2 pull-right">
-                <a :href="'cvs/create'" class="btn btn-success">Nouveau cv</a>
+                <a :href="'cvs/create'" class="btn btn-success">NEW CV</a>
             </div>
         </div> 
     </div> 
@@ -19,9 +19,9 @@
                     <p>{{ cv.presentation }}</p>
                     <!-- <form action="/" method="delete"> -->
                         <!-- {{ method_field('DELETE') }} {{ csrf_field() }} -->
-                        <a :href="'cvs/'+cv.id" class="btn btn-primary" role="button">Show</a>
-                        <a :href="'cvs/'+cv.id+'/edit'" class="btn btn-warning" role="button">Editer</a>
-                        <button class="btn btn-danger" v-on:click="deleteCV(cv)" >Supprimer</button>
+                        <a :href="'cvs/'+cv.id" class="btn btn-primary" role="button">SHOW</a>
+                        <a :href="'cvs/'+cv.id+'/edit'" class="btn btn-warning" role="button">EDIT</a>
+                        <button class="btn btn-danger" v-on:click="deleteCV(cv)" >DELETE</button>
                     <!-- </form> -->
                 </div>
             </div>
@@ -73,7 +73,7 @@
 				showCancelButton: true,
 				confirmButtonColor: '#3085d6',
 				cancelButtonColor: '#d33',
-				confirmButtonText: 'Oui, Supprimer!',
+				confirmButtonText: 'Oui, DELETE!',
 				cancelButtonText: 'Annuler'
 			}).then((result) => {
 				if (result.isConfirmed) {                    
@@ -91,8 +91,8 @@
 							console.log('error deleteCV => ', error);
 						})
 					Swal.fire(
-						'Supprimer!',
-						'Experience a etes supprimer avec succee.',
+						'DELETE!',
+						'Experience a etes DELETE avec succee.',
 						'success'
 					)
 				}

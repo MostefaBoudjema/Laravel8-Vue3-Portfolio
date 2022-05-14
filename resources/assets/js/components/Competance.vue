@@ -4,7 +4,7 @@
 					<div class="row">
 						<div class="col-md-10"><h1 class="panel-title">Competance</h1></div>
 						<div class="col-md-2 text-right">
-							<button class="btn btn-success" v-on:click="opencompetance =true; editcompetanceToggle=false">Ajouter</button>
+							<button class="btn btn-success" v-on:click="opencompetance =true; editcompetanceToggle=false">ADD</button>
 						</div>
 					</div>
 					
@@ -21,7 +21,7 @@
 						</div>
 						<div class="row">
 
-							<button class="btn btn-success btn-block" v-if="!editcompetanceToggle" v-on:click="addcompetance">Ajouter</button>
+							<button class="btn btn-success btn-block" v-if="!editcompetanceToggle" v-on:click="addcompetance">ADD</button>
 							<button class="btn btn-warning btn-block" v-if="editcompetanceToggle" v-on:click="updatecompetance">Modifier</button>
 						</div>
 
@@ -29,8 +29,8 @@
 					<ul class="list-group">
 						<li class="list-group-item" v-for="competance in competances" :key="competance.id">
 							<div class="pull-right">
-								<button class="btn btn-warning btn-sm" v-on:click="editcompetance(competance)" >Editer</button>
-								<button class="btn btn-danger btn-sm" v-on:click="deletecompetance(competance)" >Supprimer</button>
+								<button class="btn btn-warning btn-sm" v-on:click="editcompetance(competance)" >EDIT</button>
+								<button class="btn btn-danger btn-sm" v-on:click="deletecompetance(competance)" >DELETE</button>
 							</div>
 							<h3>{{competance.titre}}</h3>
 							<p>{{competance.presentation}}</p>
@@ -128,7 +128,7 @@
 				showCancelButton: true,
 				confirmButtonColor: '#3085d6',
 				cancelButtonColor: '#d33',
-				confirmButtonText: 'Oui, Supprimer!',
+				confirmButtonText: 'Oui, DELETE!',
 				cancelButtonText: 'Annuler'
 			}).then((result) => {
 				if (result.isConfirmed) {
@@ -146,8 +146,8 @@
 							console.log('errordeletecompetance => ', error);
 						})
 					Swal.fire(
-						'Supprimer!',
-						'competance a etes supprimer avec succee.',
+						'DELETE!',
+						'competance a etes DELETE avec succee.',
 						'success'
 					)
 				}

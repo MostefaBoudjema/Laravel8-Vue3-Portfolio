@@ -12,9 +12,9 @@
     			<table class="table">
     				<thead>
     					<tr>
-    						<th>titre</th>
-    						<th>Debut</th>
-    						<th>Fin</th>
+    						<th>title</th>
+    						<th>from</th>
+    						<th>to</th>
     					</tr>
     				</thead>
     				<tbody>

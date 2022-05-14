@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col-md-offset-2 col-md-8">
 			
-			<h1 class="page-header">Nouvelle expérience</h1>
+			<h1 class="page-header">NEW EXPERIENCE</h1>
           <form method="post">
              
              {{ csrf_field() }}
@@ -28,7 +28,7 @@
 			</div>
 
 			<div class="form-group">			 
-			 <button type="submit" class="  btn btn-primary form-control">Ajouter</button>
+			 <button type="submit" class="  btn btn-primary form-control">ADD</button>
 			</div>
 
           </form>

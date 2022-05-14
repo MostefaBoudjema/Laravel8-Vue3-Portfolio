@@ -23,7 +23,7 @@
                     @endforeach @endif
                 </div>
                 <div class="form-group">
-                    <input type="submit" class="form-control btn btn-primary" value="Enregistrer">
+                    <input type="submit" class="form-control btn btn-primary" value="SAVE">
                 </div>
             </form>
         </div>

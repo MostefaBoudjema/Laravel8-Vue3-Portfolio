@@ -11,13 +11,13 @@
 
 ## About Repository
 
-A very simple Laravel 7 + Vue 2 based Curd Starter portfolio for SPA Application.
+A very simple Laravel  + Vue 2 based Curd Starter portfolio for SPA Application.
 
 ## Tech Specification
 
-- Laravel 7
+- Laravel 
 - Vue 2 + sweetalert2 + laravel-vue-pagination
-- Bootstrap 4 + Font Awesome 5
+- Bootstrap + Font Awesome 5
 
 
 
