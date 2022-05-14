@@ -7,6 +7,47 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+# Laravel+Vue Crud Portfolio
+
+## About Repository
+
+A very simple Laravel 7 + Vue 2 based Curd Starter portfolio for SPA Application.
+<p align="center">
+<img src="https://i.imgur.com/mZAHbUL.png">
+<img src="https://i.imgur.com/3hhoQnq.png">
+<img src="https://i.imgur.com/aHtQkYl.png">
+<img src="https://i.imgur.com/V7OuwLn.png">
+</p>
+
+## Tech Specification
+
+- Laravel 7
+- Vue 2 + sweetalert2 + laravel-vue-pagination
+- Bootstrap 4 + Font Awesome 5
+
+
+
+## Installation
+
+- `git clone https://github.com/mostfa16/Laravel_Vue_Portfolio_V5.git`
+- `cd Laravel_Vue_Portfolio_V5/`
+- `composer install`
+- `npm install`
+- `cp .env.example .env`
+- Update `.env` and set your database credentials
+- `php artisan key:generate`
+- `php artisan migrate`
+- `php artisan db:seed`
+- `php artisan storage:link`
+
+- `npm run dev`
+- `php artisan serve`
+
+- Application http://localhost:8080/
+
+
+## Features
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
@@ -38,3 +79,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+
