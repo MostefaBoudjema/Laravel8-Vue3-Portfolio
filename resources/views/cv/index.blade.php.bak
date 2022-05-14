@@ -1,0 +1,38 @@
+@extends('layouts.app')
+@section('content')
+<cv></cv>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-10">
+                <h1>La Liste de Mes CV</h1>
+            </div>
+            <div class="col-md-2 pull-right">
+                <a href="{{ url('cvs/create') }}" class="btn btn-success">Nouveau cv</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @foreach($cvs as $cv)
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href="{{ url('cvs/'.$cv->id) }}"><img style='height: 250px; width: 250px; object-fit: contain' src="{{ asset('storage/'.$cv->photo) }}" alt="..."></a>
+                <div class="caption">
+                    <h3>{{ $cv->titre }}</h3>
+                    <p>{{ $cv->presentation }}</p>
+                    <p>
+                        <form action="{{ url('cvs', ['id' => $cv->id]) }}" method="post">
+                            {{ method_field('DELETE') }} {{ csrf_field() }}
+                            <a href="{{ url('cvs/'.$cv->id) }}" class="btn btn-primary" role="button">Show</a> @can('update', $cv)
+                            <a href="{{ url('cvs/'.$cv->id.'/edit') }}" class="btn btn-warning" role="button">Editer</a> @endcan @can('delete', $cv)
+                            <button type="submit" class="btn btn-danger" role="button">Supprimer</button> @endcan
+                        </form>
+                    </p>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+    <div class="text-center">{{ $cvs->render() }}</div>
+</div>
+@endsection
