@@ -6,9 +6,12 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
-<h1>screenshots<h1>
+<h1>Screenshots<h1>
 
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<p align="center"><img src="https://github.com/mostfa16/Laravel_Vue_Portfolio_V5/blob/master/screenshots/register.PNG"></p>
+<p align="center"><img src="https://github.com/mostfa16/Laravel_Vue_Portfolio_V5/blob/master/screenshots/login.PNG"></p>
+<p align="center"><img src="https://github.com/mostfa16/Laravel_Vue_Portfolio_V5/blob/master/screenshots/Home.PNG"></p>
+<p align="center"><img src="https://github.com/mostfa16/Laravel_Vue_Portfolio_V5/blob/master/screenshots/CV.PNG"></p>
 
 # Laravel+Vue Crud Portfolio
 
