@@ -5,20 +5,20 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^7.2.5",
-        "fideloper/proxy": "^4.2",
-        "laravel/framework": "^8.0",
+        "php": "^7.3|^8.0",
+        "fideloper/proxy": "^4.4",
+        "laravel/framework": "^8.75",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/tinker": "^2.3.0",
         "spatie/laravel-medialibrary": "^8.7.2",
         "spatie/laravel-permission": "^3.17",
-        "laravel/ui": "^3.0"
+        "laravel/ui": "^3.4"
     },
     "require-dev": {
-        "fzaninotto/faker": "~1.4",
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.7"
+        "fakerphp/faker": "^1.9.1",
+        "mockery/mockery": "^1.4.4",
+        "phpunit/phpunit": "^9.5.10"
     },
     "autoload": {
         "classmap": [
