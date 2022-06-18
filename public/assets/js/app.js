@@ -20166,14 +20166,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       "class": "col-sm-6 col-md-4",
       key: cv.id
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-      href: '/cvs/' + cv.id
+      href: 'cvs/' + cv.id
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
       style: {
         "height": "250px",
         "width": "250px",
         "object-fit": "contain"
       },
-      src: '../storage/' + cv.photo,
+      src: 'storage/' + cv.photo,
       alt: "..."
     }, null, 8
     /* PROPS */
@@ -20720,20 +20720,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Portefolio_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Portefolio.vue */ "./resources/assets/js/components/Portefolio.vue");
 /* harmony import */ var _components_Competance_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/Competance.vue */ "./resources/assets/js/components/Competance.vue");
 /* harmony import */ var _components_Cv_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Cv.vue */ "./resources/assets/js/components/Cv.vue");
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
 __webpack_require__(/*! ./bootstrap */ "./resources/assets/js/bootstrap.js");
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-// Vue.component('example', require('./components/Example.vue'));
-// Vue.component('formation', require('./components/Formation.vue'));
-
 
  // import Vue from 'vue' 
 

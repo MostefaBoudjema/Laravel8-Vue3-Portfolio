@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-4" v-for="cv in cvs" :key="cv.id">
             <div class="thumbnail">
-                <a :href="'/cvs/'+cv.id"><img style='height: 250px; width: 250px; object-fit: contain' :src="'../storage/'+cv.photo" alt="..."></a>
+                <a :href="'cvs/'+cv.id"><img style='height: 250px; width: 250px; object-fit: contain' :src="'storage/'+cv.photo" alt="..."></a>
                  <div class="caption">
                     <h3>{{ cv.titre }}</h3>
                     <p>{{ cv.presentation }}</p>

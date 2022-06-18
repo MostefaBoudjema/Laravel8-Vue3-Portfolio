@@ -11,5 +11,5 @@
 		'url'		=>url('/')
 	]) !!};
 </script>
-<script src="/assets/js/sweetalert2.js"></script>
+{{-- <script src="/assets/js/sweetalert2.js"></script> --}}
 @endsection
