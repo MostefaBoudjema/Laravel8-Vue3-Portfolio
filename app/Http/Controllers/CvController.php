@@ -2,18 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use Illuminate\Http\UploadedFile;
-
 use App\Cv;
 
 use App\Experience;
 
-use Auth;
+use Illuminate\Http\Request;
 
 use App\Http\Requests\cvRequest;
-use Illuminate\Auth\Access\Response;
+
+use Illuminate\Support\Facades\Auth;
 
 class CvController extends Controller
 {
@@ -109,6 +106,15 @@ class CvController extends Controller
     }
 
 
+    public function getCv() {
+      error_log("getCv---------------------------------------");
+      $cv1 = cv::orderBy('updated_at','desc')->get();
+      $cvsObj = cv::select("*")
+      ->orderBy('updated_at','desc')
+      ->simplePaginate(15);
+      // error_log($cv1);
+      return $cvsObj;
+    }
     public function cvExperienceCreate(Request $request, $id) {
         
         $cv = Cv::find($id);
@@ -171,20 +177,12 @@ class CvController extends Controller
     // ]);
     // }
 
-    public function getCv() {
-  
-      $cv1 = cv::select("*")
-      ->orderBy('updated_at','desc')
-      // ->paginate(3)
-      ->get();
-      // error_log($cv1);
-      return $cv1;
-    }
 
     
     public function deletecv($id) { 
       $cv = cv::find($id);
       $cv->delete();
-      return Response()->json(['etat' => true ]);
+      return 0;
+      // return Response()->json(['etat' => true ]);
     }
 }

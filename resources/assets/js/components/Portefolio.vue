@@ -29,8 +29,8 @@
 					<ul class="list-group">
 						<li class="list-group-item" v-for="portefolio in portefolios" :key="portefolio.id">
 							<div class="pull-right">
-								<button class="btn btn-warning btn-sm" v-on:click="editportefolio(portefolio)" >EDIT</button>
-								<button class="btn btn-danger btn-sm" v-on:click="deleteportefolio(portefolio)" >DELETE</button>
+								<button class="btn btn-warning btn-sm" v-on:click="editportefolio(portefolio)" >Edit</button>
+								<button class="btn btn-danger btn-sm" v-on:click="deleteportefolio(portefolio)" >Delete</button>
 							</div>
 							<h3>{{portefolio.titre}}</h3>
 							<p>{{portefolio.presentation}}</p>
@@ -46,6 +46,7 @@
 
 <script>
     export default {
+		name: "portefolio",
         data() {
 		return {
 			message: 'Hello Vue! Mus',
@@ -69,7 +70,7 @@
 	methods: {
 
 		getPortefolio1: function() {
-			axios.get(window.Laravel.url + '/getportefolios/' + window.Laravel.idCV)
+			axios.get(window.Laravel.url + '/api/getportefolios/' + window.Laravel.idCV)
 				.then(response => {
 					this.portefolios = response.data;
 					console.log('successPortefolio1 => ', response);
@@ -79,7 +80,7 @@
 				})
 		},
 		addportefolio: function() {
-			axios.post(window.Laravel.url + '/addportefolios', this.portefolio)
+			axios.post(window.Laravel.url + '/api/addportefolios', this.portefolio)
 				.then(response => {
 					// this.portefolio = response.data;
 					console.log('successaddportefolio => ', response.data);
@@ -106,7 +107,7 @@
 			this.portefolio = expParam;
 		},
 		updateportefolio: function() {
-			axios.put(window.Laravel.url + '/updateportefolios', this.portefolio)
+			axios.put(window.Laravel.url + '/api/updateportefolios', this.portefolio)
 				.then(response => {
 					// this.portefolio = response.data;
 					console.log('successupdateportefolio => ', response.data);
@@ -129,17 +130,17 @@
 		},
 		deleteportefolio: function(expParam) {
 			Swal.fire({
-				title: 'etes vous sur?',
+				title: 'Are you sure?',
 				text: "You won't be able to revert this!",
 				icon: 'error',
 				showCancelButton: true,
 				confirmButtonColor: '#3085d6',
 				cancelButtonColor: '#d33',
-				confirmButtonText: 'Oui, DELETE!',
+				confirmButtonText: 'Oui, Delete!',
 				cancelButtonText: 'Annuler'
 			}).then((result) => {
 				if (result.isConfirmed) {
-					axios.delete(window.Laravel.url + '/deleteportefolios/' + expParam.id)
+					axios.delete(window.Laravel.url + '/api/deleteportefolios/' + expParam.id)
 						.then(response => {
 							// this.portefolio = response.data;
 							console.log('successdeleteportefolio => ', response.data);
@@ -153,8 +154,8 @@
 							console.log('errordeleteportefolio => ', error);
 						})
 					Swal.fire(
-						'DELETE!',
-						'portefolio a etes DELETE avec succee.',
+						'Delete!',
+						'portefolio a etes Delete avec succee.',
 						'success'
 					)
 				}

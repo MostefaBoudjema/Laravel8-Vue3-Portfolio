@@ -22,10 +22,10 @@
                     <p>{{ $cv->presentation }}</p>
                     <p>
                         <form action="{{ url('cvs', ['id' => $cv->id]) }}" method="post">
-                            {{ method_field('DELETE') }} {{ csrf_field() }}
+                            {{ method_field('Delete') }} {{ csrf_field() }}
                             <a href="{{ url('cvs/'.$cv->id) }}" class="btn btn-primary" role="button">Show</a> @can('update', $cv)
-                            <a href="{{ url('cvs/'.$cv->id.'/edit') }}" class="btn btn-warning" role="button">EDIT</a> @endcan @can('delete', $cv)
-                            <button type="submit" class="btn btn-danger" role="button">DELETE</button> @endcan
+                            <a href="{{ url('cvs/'.$cv->id.'/edit') }}" class="btn btn-warning" role="button">Edit</a> @endcan @can('delete', $cv)
+                            <button type="submit" class="btn btn-danger" role="button">Delete</button> @endcan
                         </form>
                     </p>
                 </div>

@@ -29,8 +29,8 @@
 					<ul class="list-group">
 						<li class="list-group-item" v-for="formation in formations" :key="formation.id">
 							<div class="pull-right">
-								<button class="btn btn-warning btn-sm" v-on:click="editformation(formation)" >EDIT</button>
-								<button class="btn btn-danger btn-sm" v-on:click="deleteformation(formation)" >DELETE</button>
+								<button class="btn btn-warning btn-sm" v-on:click="editformation(formation)" >Edit</button>
+								<button class="btn btn-danger btn-sm" v-on:click="deleteformation(formation)" >Delete</button>
 							</div>
 							<h3>{{formation.titre}}</h3>
 							<p>{{formation.presentation}}</p>
@@ -45,7 +45,7 @@
 
 <script>
     export default {
-        
+        name: "formation",
 	data() {
 		return {
 			message: 'Hello Vue! Mus',			
@@ -65,7 +65,7 @@
 	},
 	methods: {
 		getFormation1: function() {
-			axios.get(window.Laravel.url + '/getformations/' + window.Laravel.idCV)
+			axios.get(window.Laravel.url + '/api/getformations/' + window.Laravel.idCV)
 				.then(response => {
 					this.formations = response.data;
 					console.log('successgetFormation1 => ', response);
@@ -75,7 +75,7 @@
 				})
 		},
 		addformation: function() {
-			axios.post(window.Laravel.url + '/addformations', this.formation)
+			axios.post(window.Laravel.url + '/api/addformations', this.formation)
 				.then(response => {
 					// this.formation = response.data;
 					console.log('successaddformation => ', response.data);
@@ -102,7 +102,7 @@
 			this.formation = expParam;
 		},
 		updateformation: function() {
-			axios.put(window.Laravel.url + '/updateformations', this.formation)
+			axios.put(window.Laravel.url + '/api/updateformations', this.formation)
 				.then(response => {
 					// this.formation = response.data;
 					console.log('successupdateformation => ', response.data);
@@ -125,17 +125,17 @@
 		},
 		deleteformation: function(expParam) {
 			Swal.fire({
-				title: 'etes vous sur?',
+				title: 'Are you sure?',
 				text: "You won't be able to revert this!",
 				icon: 'error',
 				showCancelButton: true,
 				confirmButtonColor: '#3085d6',
 				cancelButtonColor: '#d33',
-				confirmButtonText: 'Oui, DELETE!',
+				confirmButtonText: 'Oui, Delete!',
 				cancelButtonText: 'Annuler'
 			}).then((result) => {
 				if (result.isConfirmed) {
-					axios.delete(window.Laravel.url + '/deleteformations/' + expParam.id)
+					axios.delete(window.Laravel.url + '/api/deleteformations/' + expParam.id)
 						.then(response => {
 							// this.formation = response.data;
 							console.log('successdeleteformation => ', response.data);
@@ -149,8 +149,8 @@
 							console.log('errordeleteformation => ', error);
 						})
 					Swal.fire(
-						'DELETE!',
-						'formation a etes DELETE avec succee.',
+						'Delete!',
+						'formation a etes Delete avec succee.',
 						'success'
 					)
 				}

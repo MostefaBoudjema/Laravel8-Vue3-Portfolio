@@ -17,12 +17,17 @@ class Cv extends Model
     	return $this->belongsTo('App\User');
     }
 
-
     public function experiences() {
     	return $this->hasMany('App\Experience');
     }
 
     public function formations() {
     	return $this->hasMany('App\Formation');
+    }
+    public function portfolio() {
+    	return $this->hasMany('App\Portfolio');
+    }
+    public function competance() {
+    	return $this->hasMany('App\Competance');
     }
 }

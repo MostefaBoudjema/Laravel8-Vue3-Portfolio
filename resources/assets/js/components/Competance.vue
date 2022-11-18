@@ -29,8 +29,8 @@
 					<ul class="list-group">
 						<li class="list-group-item" v-for="competance in competances" :key="competance.id">
 							<div class="pull-right">
-								<button class="btn btn-warning btn-sm" v-on:click="editcompetance(competance)" >EDIT</button>
-								<button class="btn btn-danger btn-sm" v-on:click="deletecompetance(competance)" >DELETE</button>
+								<button class="btn btn-warning btn-sm" v-on:click="editcompetance(competance)" >Edit</button>
+								<button class="btn btn-danger btn-sm" v-on:click="deletecompetance(competance)" >Delete</button>
 							</div>
 							<h3>{{competance.titre}}</h3>
 							<p>{{competance.presentation}}</p>
@@ -45,6 +45,7 @@
 
 <script>
     export default {
+		name: "competance",
         data() {
 		return {
 			message: 'Hello Vue! Mus',
@@ -62,7 +63,7 @@
 	},
 	methods: {
 		getCompetance1: function() {
-			axios.get(window.Laravel.url + '/getcompetances/' + window.Laravel.idCV)
+			axios.get(window.Laravel.url + '/api/getcompetances/' + window.Laravel.idCV)
 				.then(response => {
 					this.competances = response.data;
 					console.log('successCompetance1 => ', response);
@@ -72,7 +73,7 @@
 				})
 		},
 		addcompetance: function() {
-			axios.post(window.Laravel.url + '/addcompetances', this.competance)
+			axios.post(window.Laravel.url + '/api/addcompetances', this.competance)
 				.then(response => {
 					// this.competance = response.data;
 					console.log('successaddcompetance => ', response.data);
@@ -99,7 +100,7 @@
 			this.competance = expParam;
 		},
 		updatecompetance: function() {
-			axios.put(window.Laravel.url + '/updatecompetances', this.competance)
+			axios.put(window.Laravel.url + '/api/updatecompetances', this.competance)
 				.then(response => {
 					// this.competance = response.data;
 					console.log('successupdatecompetance => ', response.data);
@@ -122,17 +123,17 @@
 		},
 		deletecompetance: function(expParam) {
 			Swal.fire({
-				title: 'etes vous sur?',
+				title: 'Are you sure?',
 				text: "You won't be able to revert this!",
 				icon: 'error',
 				showCancelButton: true,
 				confirmButtonColor: '#3085d6',
 				cancelButtonColor: '#d33',
-				confirmButtonText: 'Oui, DELETE!',
+				confirmButtonText: 'Oui, Delete!',
 				cancelButtonText: 'Annuler'
 			}).then((result) => {
 				if (result.isConfirmed) {
-					axios.delete(window.Laravel.url + '/deletecompetances/' + expParam.id)
+					axios.delete(window.Laravel.url + '/api/deletecompetances/' + expParam.id)
 						.then(response => {
 							// this.competance = response.data;
 							console.log('successdeletecompetance => ', response.data);
@@ -146,8 +147,8 @@
 							console.log('errordeletecompetance => ', error);
 						})
 					Swal.fire(
-						'DELETE!',
-						'competance a etes DELETE avec succee.',
+						'Delete!',
+						'competance a etes Delete avec succee.',
 						'success'
 					)
 				}
