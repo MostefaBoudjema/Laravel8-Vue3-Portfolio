@@ -13,7 +13,7 @@ let mix = require('laravel-mix');
 
 mix.disableNotifications()
 // mix.js('resources/assets/js/app.js', 'public/js')
-mix.js('resources/assets/js/app.js', 'public/assets/js')
+mix.js('resources/js/app.js', 'public/assets/js')
    .vue()
-   .sass('resources/assets/sass/app.scss', 'public/assets/css');
+   .sass('resources/sass/app.scss', 'public/assets/css');
 
